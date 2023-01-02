@@ -14,8 +14,7 @@ namespace CollectionComparison
         static void Main(string[] args)
         {
             FileProcessor FileProcessor = new FileProcessor();
-            FileProcessor.Download();
-            FileProcessor.Move();
+            FileProcessor.Download();            
 
             ArrayPreparer ArrayPreparer = new ArrayPreparer(FileProcessor.path);
             string[] words = ArrayPreparer.Prepare();

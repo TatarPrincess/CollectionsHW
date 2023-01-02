@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EFF0E99A-A030-4734-B001-8488675F2432}</ProjectGuid>
+    <ProjectGuid>{2C027A34-EDA4-4659-B240-CA94C73C91FF}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>CollectionComparison</RootNamespace>
-    <AssemblyName>CollectionComparison</AssemblyName>
+    <RootNamespace>WorkingWithFile</RootNamespace>
+    <AssemblyName>WorkingWithFile</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,8 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArrayPreparer.cs" />
-    <Compile Include="FileProcessor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace CollectionComparison
 {
@@ -22,8 +23,22 @@ namespace CollectionComparison
             using (StreamReader sr = new StreamReader(path))
             {
                 string str = sr.ReadToEnd();
-                char[] delimiters = { ' ', '\r', '\n' };
-                string[] words = str.Split(delimiters, StringSplitOptions.RemoveEmptyEntries);
+                StringBuilder stringBuilder= new StringBuilder(str);
+                stringBuilder.Replace('\t', ' '); 
+                stringBuilder.Replace('\n', ' ');
+                stringBuilder.Replace(',', ' ');
+                stringBuilder.Replace('.', ' ');
+                stringBuilder.Replace(';', ' ');
+                stringBuilder.Replace(':', ' ');
+                stringBuilder.Replace('?', ' ');
+                stringBuilder.Replace('!', ' ');                
+
+                char[] delimiters = {' '};
+                string[] words = stringBuilder.ToString().Split(delimiters, StringSplitOptions.RemoveEmptyEntries);
+                foreach (string w in words)
+                { 
+                  w.Trim();
+                }
                 return words;
             }
         }

@@ -18,20 +18,14 @@ namespace CollectionComparison
         public FileProcessor()
         {
             this.url = "https://lms.skillfactory.ru/assets/courseware/v1/dc9cf029ae4d0ae3ab9e490ef767588f/asset-v1:SkillFactory+CDEV+2021+type@asset+block/Text1.txt";
-            this.fileName = "cdev23_Words.txt";
+            this.path = @"C:\Store\C#\SF\Collections\CollectionsHW\CollectionsHW\cdev23_Words.txt";
         }
 
         public void Download()
         {
             WebClient client = new WebClient();
-            client.DownloadFile(url, "cdev23_Words.txt");
-        }
-        public void Move()
-        {
-            string pathFrom = @"C:\\Store\\C#\\SF\\Collections\\CollectionsHW\\CollectionsHW\\ListCollection\\bin\\Debug\\cdev23_Words.txt";
-            path = @"C:\\Store\\C#\\SF\\cdev23_Words.txt";
-            if (File.Exists(path)) File.Delete(path);
-            File.Move(pathFrom, path);
-        }
+            Console.WriteLine(path);
+            client.DownloadFile(url, path);
+        }        
     }
 }

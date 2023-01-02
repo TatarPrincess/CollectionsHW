@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EFF0E99A-A030-4734-B001-8488675F2432}</ProjectGuid>
+    <ProjectGuid>{95B14C47-E792-46A1-9D9C-43005D21F07D}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>CollectionComparison</RootNamespace>
-    <AssemblyName>CollectionComparison</AssemblyName>
+    <RootNamespace>TheMostFrequentWords</RootNamespace>
+    <AssemblyName>TheMostFrequentWords</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,13 +43,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArrayPreparer.cs" />
-    <Compile Include="FileProcessor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Word.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ListCollection\CollectionComparison.csproj">
+      <Project>{eff0e99a-a030-4734-b001-8488675f2432}</Project>
+      <Name>CollectionComparison</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
